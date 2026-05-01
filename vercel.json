@@ -1,0 +1,7 @@
+{
+  "crons": [
+    { "path": "/api/cron/ingest?region=west", "schedule": "* * * * *" },
+    { "path": "/api/cron/ingest?region=eu",   "schedule": "* * * * *" },
+    { "path": "/api/cron/ingest?region=asia", "schedule": "* * * * *" }
+  ]
+}
