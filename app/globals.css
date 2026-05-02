@@ -1,26 +1,55 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-bg-base: #0f0f0e;
+  --color-bg-surface: #181815;
+  --color-bg-elevated: #222220;
+  --color-bg-subtle: #1c1c1a;
+  --color-border-subtle: #2a2a27;
+  --color-border-default: #3a3a36;
+  --color-border-strong: #4a4a45;
+  --color-text-primary: #e8e6df;
+  --color-text-secondary: #9a9890;
+  --color-text-tertiary: #5c5b55;
+  --color-text-inverse: #0f0f0e;
+  --color-gold-bright: #c9922a;
+  --color-gold-muted: #8a6420;
+  --color-gold-subtle: #2a2014;
+  --color-gold-text: #e8b060;
+  --color-crimson-bright: #b83232;
+  --color-crimson-muted: #7a2020;
+  --color-crimson-subtle: #281414;
+  --color-crimson-text: #e06060;
+  --color-win: #3a7a3a;
+  --color-win-text: #6dbe6d;
+  --color-win-subtle: #14281a;
+  --color-loss: #7a3a3a;
+  --color-loss-text: #e06060;
+  --color-neutral: #4a4a45;
+  --color-region-west: #4a7ab8;
+  --color-region-eu: #6a9a40;
+  --color-region-asia: #b87840;
+  --color-tier-s-bg: #2a1e06;
+  --color-tier-s-text: #f0a020;
+  --color-tier-a-bg: #1e2a06;
+  --color-tier-a-text: #90c040;
+  --color-tier-b-bg: #062028;
+  --color-tier-b-text: #40a0c0;
+  --color-tier-c-bg: #20201a;
+  --color-tier-c-text: #a0a090;
+  --color-tier-d-bg: #201a1a;
+  --color-tier-d-text: #806060;
+  --font-display: var(--font-cinzel), serif;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius-card: 4px;
+  --radius-badge: 2px;
+  --radius-button: 3px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f0f0e;
+  color: #e8e6df;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
