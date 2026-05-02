@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px; }
+  .head, .row {
+    display: grid;
+    grid-template-columns: 36px 1fr 100px 70px 100px 60px;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 12px;
+  }
+  .head {
+    font-family: var(--font-sans); font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--color-text-tertiary);
+    border-bottom: 1px solid var(--color-border-default);
+  }
+  .row { border-bottom: 1px solid var(--color-border-subtle); }
+  .row:hover, .row.hover { background: var(--color-bg-subtle); }
+  .icon { width: 32px; height: 32px; background: var(--color-bg-subtle); border: 1px solid var(--color-border-default); border-radius: 3px; }
+  .name { font-family: var(--font-sans); font-size: 13px; color: var(--color-text-primary); }
+  .sub  { font-family: var(--font-mono); font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px; }
+  .tag {
+    display: inline-block; padding: 1px 6px; border-radius: 2px;
+    background: var(--color-bg-elevated); color: var(--color-text-secondary);
+    font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .samp { font-family: var(--font-mono); font-size: 12px; color: var(--color-text-secondary); text-align: right; }
+  .bar { height: 6px; background: var(--color-bg-subtle); border-radius: 999px; overflow: hidden; display: flex; }
+  .bar .w { background: var(--color-win); }
+  .bar .l { background: var(--color-loss); }
+  .pct { font-family: var(--font-mono); font-size: 13px; text-align: right; font-weight: 500; }
+  .pct.up { color: var(--color-gold-text); }
+  .pct.down { color: var(--color-crimson-text); }
+  .pct.mid { color: var(--color-text-primary); }
+</style></head>
+<body>
+
+<div class="head">
+  <div></div>
+  <div>Weapon</div>
+  <div style="text-align:right">Sample</div>
+  <div></div>
+  <div></div>
+  <div style="text-align:right">Win %</div>
+</div>
+
+<div class="row">
+  <div class="icon" style="border-color:#e8b060"></div>
+  <div><div class="name">Cursed Staff</div><div class="sub"><span class="tag">CURSED</span> · 2H</div></div>
+  <div class="samp">3,847</div>
+  <div></div>
+  <div class="bar"><div class="w" style="width:61.2%"></div><div class="l" style="width:38.8%"></div></div>
+  <div class="pct up">61.2%</div>
+</div>
+
+<div class="row hover">
+  <div class="icon" style="border-color:#d97a2a"></div>
+  <div><div class="name">1H Spear</div><div class="sub"><span class="tag">SPEAR</span> · 1H</div></div>
+  <div class="samp">2,104</div>
+  <div></div>
+  <div class="bar"><div class="w" style="width:54.3%"></div><div class="l" style="width:45.7%"></div></div>
+  <div class="pct mid">54.3%</div>
+</div>
+
+<div class="row">
+  <div class="icon"></div>
+  <div><div class="name">Carving Sword</div><div class="sub"><span class="tag">SWORD</span> · 1H · <span style="color:var(--color-text-tertiary)">sample size 142 — too thin*</span></div></div>
+  <div class="samp">142</div>
+  <div></div>
+  <div class="bar"><div class="w" style="width:43.1%"></div><div class="l" style="width:56.9%"></div></div>
+  <div class="pct down">43.1%*</div>
+</div>
+
+</body></html>

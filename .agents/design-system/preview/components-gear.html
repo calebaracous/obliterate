@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px; display: flex; gap: 24px; align-items: flex-start; }
+  .gear-block { display: flex; flex-direction: column; gap: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 56px); gap: 4px; }
+  .slot { width: 56px; height: 56px; background: var(--color-bg-subtle); border: 1.5px solid var(--color-border-default); border-radius: 3px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 9px; color: var(--color-text-tertiary); text-transform: uppercase; }
+  .slot.q-good        { border-color: #6dbe6d; }
+  .slot.q-outstanding { border-color: #4a8acb; }
+  .slot.q-excellent   { border-color: #e8b060; }
+  .slot.q-master      { border-color: #d97a2a; }
+  .slot.empty { opacity: 0.5; }
+  .label { font-family: var(--font-mono); font-size: 9px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; }
+  .row { display: flex; gap: 4px; }
+  .stats { display: flex; flex-direction: column; gap: 4px; padding-top: 4px; }
+  .stat-row { display: flex; gap: 8px; align-items: baseline; }
+  .stat-k { font-family: var(--font-mono); font-size: 10px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; min-width: 40px; }
+  .stat-v { font-family: var(--font-mono); font-size: 13px; color: var(--color-gold-text); }
+</style></head>
+<body>
+
+<div class="gear-block">
+  <div class="label">Sigvald · 1432 IP</div>
+  <div class="grid">
+    <div class="slot q-master">HEAD</div>
+    <div class="slot q-excellent">CAPE</div>
+    <div class="slot q-outstanding">BAG</div>
+    <div class="slot q-master">CHEST</div>
+    <div class="slot empty">MNT</div>
+    <div class="slot q-good">FOOD</div>
+    <div class="slot q-outstanding">BOOT</div>
+    <div class="slot q-master">MAIN</div>
+    <div class="slot q-excellent">OFF</div>
+  </div>
+  <div class="row">
+    <div class="slot q-good" style="width:56px;height:56px">POT</div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat-row"><div class="stat-k">Main</div><div class="stat-v">T8.2 Cursed Staff</div></div>
+  <div class="stat-row"><div class="stat-k">Off</div><div class="stat-v">T8.1 Eye of Secrets</div></div>
+  <div class="stat-row"><div class="stat-k">Head</div><div class="stat-v">T8.3 Cleric Cowl</div></div>
+  <div class="stat-row"><div class="stat-k">Chest</div><div class="stat-v">T8.3 Hellion Jacket</div></div>
+  <div class="stat-row"><div class="stat-k">Shoes</div><div class="stat-v">T8.1 Mercenary</div></div>
+  <div class="stat-row"><div class="stat-k">Cape</div><div class="stat-v">T8.2 Lymhurst</div></div>
+</div>
+
+</body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .row { display: grid; grid-template-columns: 80px 1fr; align-items: baseline; gap: 16px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; }
+  .meta { font-family: var(--font-mono); font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px; }
+</style></head>
+<body>
+  <div class="row">
+    <div class="lbl">Body</div>
+    <div>
+      <div class="t-body">1H Spear is up 4.2% this patch — sample size now exceeds the threshold to call it stable.</div>
+      <div class="meta">IBM Plex Sans · 14/400 · 1.6</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="lbl">Small</div>
+    <div>
+      <div class="t-small">Sample size 47 — too thin to call.</div>
+      <div class="meta">IBM Plex Sans · 12/400 · 1.5 — captions, secondary</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="lbl">Micro</div>
+    <div>
+      <div class="t-micro">Last updated 47s ago</div>
+      <div class="meta">IBM Plex Sans · 11/500 · uppercase · 0.08em — tags, labels</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="lbl">Stat</div>
+    <div>
+      <div class="t-stat" style="color:var(--color-gold-text)">54.3%</div>
+      <div class="meta">IBM Plex Mono · 24/500 · tabular — large stat numbers</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="lbl">Mono</div>
+    <div>
+      <div class="t-mono">1432 IP · T8.2 · 2m ago</div>
+      <div class="meta">IBM Plex Mono · 13/400 · tabular — IP, IDs, timestamps</div>
+    </div>
+  </div>
+</body></html>

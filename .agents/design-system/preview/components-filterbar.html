@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 18px; }
+  .bar {
+    display: flex; gap: 8px;
+    padding: 12px 16px;
+    background: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border-default);
+    border-radius: 4px 4px 0 0;
+    align-items: center;
+  }
+  .filt {
+    height: 32px; padding: 0 12px;
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border-default);
+    border-radius: 3px;
+    font-family: var(--font-sans); font-size: 12px; color: var(--color-text-primary);
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .filt .lbl { color: var(--color-text-tertiary); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .filt.active { border-bottom: 2px solid var(--color-gold-bright); border-radius: 3px 3px 0 0; }
+  .chev { color: var(--color-text-tertiary); }
+  .spacer { flex: 1; }
+  .btn {
+    height: 32px; padding: 0 12px; border-radius: 3px;
+    background: transparent; color: var(--color-text-secondary); border: 1px solid var(--color-border-default);
+    font-family: var(--font-sans); font-size: 12px;
+    cursor: pointer;
+  }
+</style></head>
+<body>
+
+<div class="bar">
+  <div class="filt"><span class="lbl">Region</span> All <span class="chev">▾</span></div>
+  <div class="filt active"><span class="lbl">Type</span> HG 5v5 <span class="chev">▾</span></div>
+  <div class="filt"><span class="lbl">IP</span> 1100–1400 <span class="chev">▾</span></div>
+  <div class="filt"><span class="lbl">Window</span> Last 7d <span class="chev">▾</span></div>
+  <div class="filt"><span class="lbl">Patch</span> Latest <span class="chev">▾</span></div>
+  <div class="spacer"></div>
+  <button class="btn">Reset</button>
+</div>
+
+</body></html>

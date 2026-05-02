@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .group-label { font-family: var(--font-sans); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-tertiary); margin-bottom: 10px; }
+  .srow { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-family: var(--font-mono); font-size: 11px; color: var(--color-text-secondary); }
+  .bar { background: var(--color-gold-bright); height: 12px; }
+  .num { width: 64px; }
+  .rrow { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--color-text-secondary); }
+  .rchip { width: 36px; height: 36px; background: var(--color-bg-elevated); border: 1px solid var(--color-border-default); }
+</style></head>
+<body>
+
+<div>
+  <div class="group-label">Spacing scale (4px base)</div>
+  <div class="srow"><div class="num">space-1</div><div class="bar" style="width:4px"></div><div>4px</div></div>
+  <div class="srow"><div class="num">space-2</div><div class="bar" style="width:8px"></div><div>8px</div></div>
+  <div class="srow"><div class="num">space-3</div><div class="bar" style="width:12px"></div><div>12px</div></div>
+  <div class="srow"><div class="num">space-4</div><div class="bar" style="width:16px"></div><div>16px · card</div></div>
+  <div class="srow"><div class="num">space-5</div><div class="bar" style="width:20px"></div><div>20px · large card</div></div>
+  <div class="srow"><div class="num">space-6</div><div class="bar" style="width:24px"></div><div>24px</div></div>
+  <div class="srow"><div class="num">space-8</div><div class="bar" style="width:32px"></div><div>32px</div></div>
+  <div class="srow"><div class="num">space-10</div><div class="bar" style="width:40px"></div><div>40px · chart gutter</div></div>
+</div>
+
+<div>
+  <div class="group-label">Radii — sharp by default</div>
+  <div class="rrow"><div class="rchip" style="border-radius:0"></div><div>0px · tables, sections</div></div>
+  <div class="rrow"><div class="rchip" style="border-radius:2px"></div><div>2px · radius-badge</div></div>
+  <div class="rrow"><div class="rchip" style="border-radius:3px"></div><div>3px · radius-button</div></div>
+  <div class="rrow"><div class="rchip" style="border-radius:4px"></div><div>4px · radius-card</div></div>
+  <div class="rrow"><div class="rchip" style="border-radius:999px"></div><div>999px · radius-pill (region/content tags only)</div></div>
+</div>
+
+</body></html>

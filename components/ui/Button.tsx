@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'danger' | 'quiet'
   size?: 'sm' | 'md'
 }
 
@@ -21,6 +21,9 @@ export function Button({
         variant === 'secondary' &&
           'bg-bg-elevated text-text-primary border border-border-default hover:border-border-strong',
         variant === 'ghost' && 'text-text-secondary hover:text-text-primary hover:bg-bg-subtle',
+        variant === 'danger' &&
+          'border border-crimson-muted text-crimson-text hover:bg-crimson-subtle',
+        variant === 'quiet' && 'text-text-secondary hover:text-text-primary',
         className
       )}
       {...props}

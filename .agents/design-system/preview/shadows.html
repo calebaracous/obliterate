@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 28px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .card {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 4px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .name { font-family: var(--font-sans); font-size: 11px; font-weight: 600; color: var(--color-text-primary); }
+  .meta { font-family: var(--font-mono); font-size: 9px; color: var(--color-text-tertiary); }
+  .glow-gold    { box-shadow: inset 0 0 0 1px rgba(201,146,42,0.4); border-color: rgba(201,146,42,0.4); }
+  .glow-crimson { box-shadow: inset 0 0 0 1px rgba(184,50,50,0.4); border-color: rgba(184,50,50,0.4); }
+  .sm { box-shadow: 0 1px 2px rgba(0,0,0,0.4); }
+  .md { box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+  .lg { box-shadow: 0 12px 32px rgba(0,0,0,0.65); }
+</style></head>
+<body>
+  <div class="card sm"><div class="name">sm</div><div class="meta">hairline</div></div>
+  <div class="card md"><div class="name">md</div><div class="meta">modal lift</div></div>
+  <div class="card lg"><div class="name">lg</div><div class="meta">overlay/sheet</div></div>
+  <div class="card glow-gold"><div class="name" style="color:var(--color-gold-text)">gold glow</div><div class="meta">active CTA</div></div>
+  <div class="card glow-crimson"><div class="name" style="color:var(--color-crimson-text)">crimson glow</div><div class="meta">danger</div></div>
+</body></html>

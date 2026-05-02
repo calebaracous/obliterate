@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" fill="none">
+  <g transform="translate(0, 0)">
+    <path d="M8 8 L56 8 L56 44 L32 58 L8 44 Z" stroke="#0f0f0e" stroke-width="1.5" fill="#c9922a"></path>
+    <g stroke="#0f0f0e" stroke-width="1.5" stroke-linecap="square" fill="none">
+      <line x1="18" y1="18" x2="44" y2="44"></line>
+      <line x1="44" y1="18" x2="18" y2="44"></line>
+    </g>
+    <circle cx="32" cy="31" r="3" fill="#b83232"></circle>
+  </g>
+  <text x="76" y="40" font-family="Cinzel, &#39;Trajan Pro&#39;, serif" font-size="28" font-weight="600" letter-spacing="3" fill="#0f0f0e">OBLITERATE</text>
+</svg>

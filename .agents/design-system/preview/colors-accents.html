@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 0; }
+  .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .swatch { height: 110px; padding: 10px 12px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid rgba(0,0,0,0.4); }
+  .swatch:last-child { border-right: none; }
+  .name { font-family: var(--font-sans); font-size: 11px; font-weight: 600; }
+  .hex  { font-family: var(--font-mono); font-size: 10px; opacity: 0.8; }
+</style></head>
+<body>
+<div class="wrap">
+  <div class="swatch" style="background:#c9922a; color:#0f0f0e"><div class="name">gold-bright</div><div class="hex">#c9922a · primary CTA</div></div>
+  <div class="swatch" style="background:#8a6420; color:#e8e6df"><div class="name">gold-muted</div><div class="hex">#8a6420 · hover</div></div>
+  <div class="swatch" style="background:#2a2014; color:#e8b060"><div class="name">gold-subtle</div><div class="hex">#2a2014 · selected row</div></div>
+  <div class="swatch" style="background:#181815; color:#e8b060"><div class="name">gold-text</div><div class="hex">#e8b060 · on dark</div></div>
+</div>
+<div class="wrap" style="border-top:1px solid rgba(0,0,0,0.4)">
+  <div class="swatch" style="background:#b83232; color:#0f0f0e"><div class="name">crimson-bright</div><div class="hex">#b83232 · death/kill</div></div>
+  <div class="swatch" style="background:#7a2020; color:#e8e6df"><div class="name">crimson-muted</div><div class="hex">#7a2020 · hover</div></div>
+  <div class="swatch" style="background:#281414; color:#e06060"><div class="name">crimson-subtle</div><div class="hex">#281414 · danger bg</div></div>
+  <div class="swatch" style="background:#181815; color:#e06060"><div class="name">crimson-text</div><div class="hex">#e06060 · on dark</div></div>
+</div>
+</body></html>

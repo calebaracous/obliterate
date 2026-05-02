@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 0; }
+  .wrap {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+  }
+  .swatch {
+    height: 110px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(0,0,0,0.4);
+  }
+  .swatch:last-child { border-right: none; }
+  .name { font-family: var(--font-sans); font-size: 11px; font-weight: 600; color: var(--color-text-primary); }
+  .hex  { font-family: var(--font-mono); font-size: 10px; opacity: 0.7; }
+  .strip {
+    display: flex;
+  }
+  .strip + .strip { border-top: 1px solid rgba(0,0,0,0.4); }
+</style></head>
+<body>
+<div class="wrap">
+
+<div class="strip">
+  <div class="swatch" style="background:#0f0f0e; color:#e8e6df; flex:1.2"><div class="name">bg-base</div><div class="hex">#0f0f0e</div></div>
+  <div class="swatch" style="background:#181815; color:#e8e6df; flex:1.2"><div class="name">bg-surface</div><div class="hex">#181815</div></div>
+  <div class="swatch" style="background:#1c1c1a; color:#e8e6df; flex:1.2"><div class="name">bg-subtle</div><div class="hex">#1c1c1a</div></div>
+  <div class="swatch" style="background:#222220; color:#e8e6df; flex:1.2"><div class="name">bg-elevated</div><div class="hex">#222220</div></div>
+  <div class="swatch" style="background:#2a2a27; color:#e8e6df; flex:1"><div class="name">border-subtle</div><div class="hex">#2a2a27</div></div>
+  <div class="swatch" style="background:#3a3a36; color:#e8e6df; flex:1"><div class="name">border-default</div><div class="hex">#3a3a36</div></div>
+  <div class="swatch" style="background:#4a4a45; color:#e8e6df; flex:1"><div class="name">border-strong</div><div class="hex">#4a4a45</div></div>
+</div>
+
+</div>
+</body></html>

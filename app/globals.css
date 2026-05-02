@@ -1,55 +1,123 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 @theme {
-  --color-bg-base: #0f0f0e;
-  --color-bg-surface: #181815;
-  --color-bg-elevated: #222220;
-  --color-bg-subtle: #1c1c1a;
-  --color-border-subtle: #2a2a27;
+  /* Surfaces */
+  --color-bg-base:        #0f0f0e;
+  --color-bg-surface:     #181815;
+  --color-bg-elevated:    #222220;
+  --color-bg-subtle:      #1c1c1a;
+
+  /* Borders */
+  --color-border-subtle:  #2a2a27;
   --color-border-default: #3a3a36;
-  --color-border-strong: #4a4a45;
-  --color-text-primary: #e8e6df;
+  --color-border-strong:  #4a4a45;
+
+  /* Text */
+  --color-text-primary:   #e8e6df;
   --color-text-secondary: #9a9890;
-  --color-text-tertiary: #5c5b55;
-  --color-text-inverse: #0f0f0e;
+  --color-text-tertiary:  #5c5b55;
+  --color-text-inverse:   #0f0f0e;
+
+  /* Gold */
   --color-gold-bright: #c9922a;
-  --color-gold-muted: #8a6420;
+  --color-gold-muted:  #8a6420;
   --color-gold-subtle: #2a2014;
-  --color-gold-text: #e8b060;
+  --color-gold-text:   #e8b060;
+
+  /* Crimson */
   --color-crimson-bright: #b83232;
-  --color-crimson-muted: #7a2020;
+  --color-crimson-muted:  #7a2020;
   --color-crimson-subtle: #281414;
-  --color-crimson-text: #e06060;
-  --color-win: #3a7a3a;
-  --color-win-text: #6dbe6d;
-  --color-win-subtle: #14281a;
-  --color-loss: #7a3a3a;
-  --color-loss-text: #e06060;
-  --color-neutral: #4a4a45;
+  --color-crimson-text:   #e06060;
+
+  /* Win / loss */
+  --color-win:         #3a7a3a;
+  --color-win-text:    #6dbe6d;
+  --color-win-subtle:  #14281a;
+  --color-loss:        #7a3a3a;
+  --color-loss-text:   #e06060;
+  --color-loss-subtle: #281414;
+  --color-neutral:     #4a4a45;
+
+  /* Region servers */
   --color-region-west: #4a7ab8;
-  --color-region-eu: #6a9a40;
+  --color-region-eu:   #6a9a40;
   --color-region-asia: #b87840;
-  --color-tier-s-bg: #2a1e06;
-  --color-tier-s-text: #f0a020;
-  --color-tier-a-bg: #1e2a06;
-  --color-tier-a-text: #90c040;
-  --color-tier-b-bg: #062028;
-  --color-tier-b-text: #40a0c0;
-  --color-tier-c-bg: #20201a;
-  --color-tier-c-text: #a0a090;
-  --color-tier-d-bg: #201a1a;
-  --color-tier-d-text: #806060;
-  --font-display: var(--font-cinzel), serif;
-  --font-sans: 'IBM Plex Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-  --radius-card: 4px;
-  --radius-badge: 2px;
+
+  /* Tiers */
+  --color-tier-s-bg: #2a1e06; --color-tier-s-text: #f0a020;
+  --color-tier-a-bg: #1e2a06; --color-tier-a-text: #90c040;
+  --color-tier-b-bg: #062028; --color-tier-b-text: #40a0c0;
+  --color-tier-c-bg: #20201a; --color-tier-c-text: #a0a090;
+  --color-tier-d-bg: #201a1a; --color-tier-d-text: #806060;
+
+  /* Item quality borders */
+  --color-quality-normal:      #b8b8ad;
+  --color-quality-good:        #6dbe6d;
+  --color-quality-outstanding: #4a8acb;
+  --color-quality-excellent:   #e8b060;
+  --color-quality-masterpiece: #d97a2a;
+
+  /* Type families — Cinzel injects --font-display directly via next/font */
+  --font-display: var(--font-display-var), 'Trajan Pro', serif;
+  --font-sans:    var(--font-sans-var), 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    var(--font-mono-var), 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+
+  /* Radii */
+  --radius-badge:  2px;
   --radius-button: 3px;
+  --radius-card:   4px;
+  --radius-pill:   999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.65);
+
+  /* Motion */
+  --ease-out:        cubic-bezier(0.2, 0, 0, 1);
+  --ease-in:         cubic-bezier(0.4, 0, 1, 1);
+  --duration-micro:  150ms;
+  --duration-base:   250ms;
 }
 
 body {
   background-color: #0f0f0e;
   color: #e8e6df;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+/* Tabular numerals everywhere mono is used */
+.font-mono { font-variant-numeric: tabular-nums; }
+
+/* Subtle stone/parchment noise — CSS only, barely perceptible */
+.bg-stone {
+  background-color: #0f0f0e;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(201,146,42,0.025) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(184,50,50,0.02) 0%, transparent 40%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.008) 0px,
+      rgba(255,255,255,0.008) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+}
+
+/* Inset glows for active CTAs */
+.glow-gold   { box-shadow: inset 0 0 0 1px rgba(201,146,42,0.4); }
+.glow-crimson { box-shadow: inset 0 0 0 1px rgba(184,50,50,0.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

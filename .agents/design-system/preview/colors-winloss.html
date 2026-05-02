@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 0; }
+  .wrap { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; }
+  .swatch { height: 110px; padding: 10px 12px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid rgba(0,0,0,0.4); }
+  .swatch:last-child { border-right: none; }
+  .name { font-family: var(--font-sans); font-size: 11px; font-weight: 600; }
+  .hex  { font-family: var(--font-mono); font-size: 10px; opacity: 0.85; }
+</style></head>
+<body>
+<div class="wrap">
+  <div class="swatch" style="background:#3a7a3a; color:#0f0f0e"><div class="name">win</div><div class="hex">#3a7a3a</div></div>
+  <div class="swatch" style="background:#14281a; color:#6dbe6d"><div class="name">win-subtle</div><div class="hex">#14281a</div></div>
+  <div class="swatch" style="background:#181815; color:#6dbe6d"><div class="name">win-text</div><div class="hex">#6dbe6d</div></div>
+  <div class="swatch" style="background:#4a4a45; color:#0f0f0e"><div class="name">neutral</div><div class="hex">#4a4a45</div></div>
+  <div class="swatch" style="background:#7a3a3a; color:#0f0f0e"><div class="name">loss</div><div class="hex">#7a3a3a</div></div>
+  <div class="swatch" style="background:#281414; color:#e06060"><div class="name">loss-subtle</div><div class="hex">#281414</div></div>
+  <div class="swatch" style="background:#181815; color:#e06060"><div class="name">loss-text</div><div class="hex">#e06060</div></div>
+</div>
+</body></html>

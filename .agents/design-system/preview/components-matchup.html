@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px; }
+  .matrix { display: grid; grid-template-columns: 60px repeat(6, 40px); gap: 2px; }
+  .cell { height: 40px; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; }
+  .hdr { background: transparent; color: var(--color-text-secondary); font-size: 10px; }
+  .row-hdr { justify-content: flex-end; padding-right: 8px; color: var(--color-text-secondary); font-size: 10px; }
+  .diag { background: repeating-linear-gradient(45deg, #2a2a27 0px, #2a2a27 2px, #181815 2px, #181815 4px); }
+  .legend { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-family: var(--font-mono); font-size: 10px; color: var(--color-text-tertiary); }
+  .gradient { width: 200px; height: 8px; background: linear-gradient(90deg, #7a3a3a, #4a4a45, #3a7a3a); border-radius: 2px; }
+</style></head>
+<body>
+
+<div class="matrix">
+  <div class="cell hdr"></div>
+  <div class="cell hdr">CRS</div>
+  <div class="cell hdr">SPR</div>
+  <div class="cell hdr">SWD</div>
+  <div class="cell hdr">DAG</div>
+  <div class="cell hdr">BOW</div>
+  <div class="cell hdr">XBW</div>
+
+  <div class="cell row-hdr">CRS</div>
+  <div class="cell diag"></div>
+  <div class="cell" style="background:#2a4a2a; color:#e8e6df">61</div>
+  <div class="cell" style="background:#3a6a3a; color:#0f0f0e">68</div>
+  <div class="cell" style="background:#4a4a3a; color:#e8e6df">52</div>
+  <div class="cell" style="background:#5a3a3a; color:#e8e6df">42</div>
+  <div class="cell" style="background:#3a5a3a; color:#0f0f0e">59</div>
+
+  <div class="cell row-hdr">SPR</div>
+  <div class="cell" style="background:#5a3a3a; color:#e8e6df">39</div>
+  <div class="cell diag"></div>
+  <div class="cell" style="background:#4a4a3a; color:#e8e6df">51</div>
+  <div class="cell" style="background:#3a5a3a; color:#0f0f0e">58</div>
+  <div class="cell" style="background:#3a6a3a; color:#0f0f0e">64</div>
+  <div class="cell" style="background:#4a4a3a; color:#e8e6df">49</div>
+
+  <div class="cell row-hdr">SWD</div>
+  <div class="cell" style="background:#6a3a3a; color:#e8e6df">32</div>
+  <div class="cell" style="background:#4a4a3a; color:#e8e6df">49</div>
+  <div class="cell diag"></div>
+  <div class="cell" style="background:#3a6a3a; color:#0f0f0e">63</div>
+  <div class="cell" style="background:#4a4a3a; color:#e8e6df">53</div>
+  <div class="cell" style="background:#5a3a3a; color:#e8e6df">41</div>
+</div>
+
+<div class="legend">
+  Loss <div class="gradient"></div> Win
+</div>
+
+</body></html>

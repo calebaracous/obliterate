@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 16px; }
+  .kill {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto auto 1fr auto auto;
+    align-items: center;
+    gap: 12px;
+    height: 56px;
+    padding: 0 14px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+  }
+  .kill + .kill { margin-top: 6px; }
+  .kill.hover { background: var(--color-bg-elevated); border-color: var(--color-border-default); }
+  .gear { display: flex; gap: 2px; }
+  .icon { width: 22px; height: 22px; background: var(--color-bg-subtle); border: 1px solid var(--color-border-default); border-radius: 2px; }
+  .icon.q-good        { border-color: #6dbe6d; }
+  .icon.q-outstanding { border-color: #4a8acb; }
+  .icon.q-excellent   { border-color: #e8b060; }
+  .icon.q-master      { border-color: #d97a2a; }
+  .name { color: var(--color-text-primary); font-weight: 500; }
+  .guild { color: var(--color-text-tertiary); font-size: 11px; }
+  .ip { font-family: var(--font-mono); font-size: 12px; color: var(--color-text-secondary); }
+  .vs { font-family: var(--font-mono); font-size: 11px; color: var(--color-crimson-text); text-transform: uppercase; letter-spacing: 0.1em; }
+  .pill { padding: 2px 8px; border-radius: 999px; font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .fame { font-family: var(--font-mono); font-size: 12px; color: var(--color-gold-text); text-align: right; }
+  .ago { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-tertiary); width: 32px; text-align: right; }
+  .victim .name { color: var(--color-text-secondary); }
+</style></head>
+<body>
+
+<div class="kill">
+  <div class="gear"><div class="icon q-master"></div><div class="icon q-excellent"></div><div class="icon q-outstanding"></div><div class="icon q-good"></div><div class="icon"></div></div>
+  <div><div class="name">Sigvald</div><div class="guild">⟪Black Hand⟫</div></div>
+  <div class="ip">1432 IP</div>
+  <span class="pill" style="background:rgba(240,160,32,0.18); color:#f0c060">HG 5v5</span>
+  <div class="vs">vs</div>
+  <div class="gear victim"><div class="icon q-outstanding"></div><div class="icon q-good"></div><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+  <div class="victim"><div class="name">Velthrak</div><div class="guild">⟪Mercia⟫</div></div>
+  <div class="ip">1287 IP</div>
+  <div class="fame">2.4M<div class="ago">2m</div></div>
+</div>
+
+<div class="kill hover">
+  <div class="gear"><div class="icon q-excellent"></div><div class="icon q-outstanding"></div><div class="icon q-good"></div><div class="icon"></div><div class="icon"></div></div>
+  <div><div class="name">Yrsa.Ulvr</div><div class="guild">⟪Iron Crown⟫</div></div>
+  <div class="ip">1376 IP</div>
+  <span class="pill" style="background:rgba(184,50,50,0.15); color:#e06060">ZvZ</span>
+  <div class="vs">vs</div>
+  <div class="gear victim"><div class="icon q-good"></div><div class="icon"></div><div class="icon"></div><div class="icon"></div><div class="icon"></div></div>
+  <div class="victim"><div class="name">Doomrider</div><div class="guild">⟪Ashen⟫</div></div>
+  <div class="ip">1198 IP</div>
+  <div class="fame">847k<div class="ago">5m</div></div>
+</div>
+
+</body></html>

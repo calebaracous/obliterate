@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Obliterate — Colors & Type
+   Dark, data-forward. Medieval-fantasy filtered through a tactical HUD.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* --- Surfaces ---------------------------------------------------------- */
+  --color-bg-base:        #0f0f0e;  /* page */
+  --color-bg-surface:     #181815;  /* card / panel */
+  --color-bg-elevated:    #222220;  /* dropdown, modal */
+  --color-bg-subtle:      #1c1c1a;  /* row hover, input */
+
+  /* --- Borders ----------------------------------------------------------- */
+  --color-border-subtle:  #2a2a27;  /* default */
+  --color-border-default: #3a3a36;  /* emphasized */
+  --color-border-strong:  #4a4a45;  /* active / selected */
+
+  /* --- Text -------------------------------------------------------------- */
+  --color-text-primary:   #e8e6df;  /* warm white */
+  --color-text-secondary: #9a9890;
+  --color-text-tertiary:  #5c5b55;
+  --color-text-inverse:   #0f0f0e;
+
+  /* --- Gold (primary accent — medieval economy reference) --------------- */
+  --color-gold-bright:    #c9922a;
+  --color-gold-muted:     #8a6420;
+  --color-gold-subtle:    #2a2014;
+  --color-gold-text:      #e8b060;
+
+  /* --- Crimson (death / kills) ----------------------------------------- */
+  --color-crimson-bright: #b83232;
+  --color-crimson-muted:  #7a2020;
+  --color-crimson-subtle: #281414;
+  --color-crimson-text:   #e06060;
+
+  /* --- Win / loss / neutral ------------------------------------------- */
+  --color-win:            #3a7a3a;
+  --color-win-text:       #6dbe6d;
+  --color-win-subtle:     #14281a;
+  --color-loss:           #7a3a3a;
+  --color-loss-text:      #e06060;
+  --color-loss-subtle:    #281414;
+  --color-neutral:        #4a4a45;
+
+  /* --- Region servers --------------------------------------------------- */
+  --color-region-west:    #4a7ab8;
+  --color-region-eu:      #6a9a40;
+  --color-region-asia:    #b87840;
+
+  /* --- Tier list -------------------------------------------------------- */
+  --color-tier-s-bg:      #2a1e06;  --color-tier-s-text: #f0a020;
+  --color-tier-a-bg:      #1e2a06;  --color-tier-a-text: #90c040;
+  --color-tier-b-bg:      #062028;  --color-tier-b-text: #40a0c0;
+  --color-tier-c-bg:      #20201a;  --color-tier-c-text: #a0a090;
+  --color-tier-d-bg:      #201a1a;  --color-tier-d-text: #806060;
+
+  /* --- Item quality borders -------------------------------------------- */
+  --color-quality-normal:        #b8b8ad;
+  --color-quality-good:          #6dbe6d;
+  --color-quality-outstanding:   #4a8acb;
+  --color-quality-excellent:     #e8b060;
+  --color-quality-masterpiece:   #d97a2a;
+
+  /* --- Type families --------------------------------------------------- */
+  --font-display: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+  --font-sans:    'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+
+  /* --- Type scale ------------------------------------------------------ */
+  --text-display-size:    28px;  --text-display-lh:    1.2;  --text-display-weight: 600;
+  --text-heading-size:    18px;  --text-heading-lh:    1.3;  --text-heading-weight: 600;
+  --text-subheading-size: 14px;  --text-subheading-lh: 1.4;  --text-subheading-weight: 500;
+  --text-body-size:       14px;  --text-body-lh:       1.6;  --text-body-weight: 400;
+  --text-small-size:      12px;  --text-small-lh:      1.5;  --text-small-weight: 400;
+  --text-micro-size:      11px;  --text-micro-lh:      1.4;  --text-micro-weight: 500;
+  --text-stat-size:       24px;  --text-stat-lh:       1.1;  --text-stat-weight: 500;
+  --text-mono-size:       13px;  --text-mono-lh:       1.5;  --text-mono-weight: 400;
+
+  /* --- Spacing (4px base) --------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* --- Radii (sharp by default) --------------------------------------- */
+  --radius-badge:  2px;
+  --radius-button: 3px;
+  --radius-card:   4px;
+  --radius-pill:   999px;
+
+  /* --- Shadows / elevation -------------------------------------------- */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg:  0 12px 32px rgba(0, 0, 0, 0.65);
+  --shadow-inset-glow-gold:    inset 0 0 0 1px rgba(201, 146, 42, 0.4);
+  --shadow-inset-glow-crimson: inset 0 0 0 1px rgba(184, 50, 50, 0.4);
+
+  /* --- Layout --------------------------------------------------------- */
+  --sidebar-width: 240px;
+  --max-content-width: 1280px;
+
+  /* --- Motion --------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in:  cubic-bezier(0.4, 0, 1, 1);
+  --duration-micro: 150ms;
+  --duration-base:  250ms;
+}
+
+/* ==========================================================================
+   Semantic type classes — apply these directly, no Tailwind needed
+   ========================================================================== */
+
+.t-display {
+  font-family: var(--font-display);
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-lh);
+  font-weight: var(--text-display-weight);
+  letter-spacing: 0.01em;
+  color: var(--color-text-primary);
+}
+
+.t-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-size);
+  line-height: var(--text-heading-lh);
+  font-weight: var(--text-heading-weight);
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+}
+
+.t-subheading {
+  font-family: var(--font-sans);
+  font-size: var(--text-subheading-size);
+  line-height: var(--text-subheading-lh);
+  font-weight: var(--text-subheading-weight);
+  color: var(--color-text-primary);
+}
+
+.t-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-lh);
+  font-weight: var(--text-body-weight);
+  color: var(--color-text-primary);
+}
+
+.t-small {
+  font-family: var(--font-sans);
+  font-size: var(--text-small-size);
+  line-height: var(--text-small-lh);
+  color: var(--color-text-secondary);
+}
+
+.t-micro {
+  font-family: var(--font-sans);
+  font-size: var(--text-micro-size);
+  line-height: var(--text-micro-lh);
+  font-weight: var(--text-micro-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+
+.t-stat {
+  font-family: var(--font-mono);
+  font-size: var(--text-stat-size);
+  line-height: var(--text-stat-lh);
+  font-weight: var(--text-stat-weight);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-size);
+  line-height: var(--text-mono-lh);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   Base reset
+   ========================================================================== */
+
+html, body {
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-lh);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+/* Subtle parchment / stone noise on dark bg — CSS only */
+.bg-stone {
+  background-color: var(--color-bg-base);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(201, 146, 42, 0.025) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(184, 50, 50, 0.02) 0%, transparent 40%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.008) 0px,
+      rgba(255, 255, 255, 0.008) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+}

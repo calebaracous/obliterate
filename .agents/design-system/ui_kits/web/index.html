@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Obliterate · Web UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; min-height: 100vh; }
+  body { background: var(--color-bg-base); }
+  .app { display: flex; min-height: 100vh; }
+  .main { flex: 1; min-width: 0; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: var(--color-border-default); border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="Components.jsx"></script>
+<script type="text/babel" src="Shell.jsx"></script>
+<script type="text/babel" src="KillFeed.jsx"></script>
+<script type="text/babel" src="BuildsPage.jsx"></script>
+<script type="text/babel" src="PlayerProfile.jsx"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+function App() {
+  const [page, setPage] = useState('feed');
+  const regions = [
+    { name: 'West', label: '47s',     status: 'fresh' },
+    { name: 'EU',   label: '52s',     status: 'fresh' },
+    { name: 'Asia', label: '4m 12s',  status: 'stale' },
+  ];
+  const titles = {
+    feed:    { title: 'Live kills', subtitle: '3 regions · updated 47s ago' },
+    builds:  { title: 'Builds',     subtitle: 'Win rates · last 7 days · 24,318 kills' },
+    tier:    { title: 'Tier list',  subtitle: 'HG 5v5 · 1100–1400 IP · last 7 days' },
+    matchup: { title: 'Matchups',   subtitle: 'Weapon-vs-weapon win rates · last 7 days' },
+    player:  { title: 'Players',    subtitle: 'Sigvald · ⟪Black Hand⟫' },
+    guild:   { title: 'Guilds',     subtitle: '— select a guild —' },
+  };
+  return (
+    <div className="app">
+      <Sidebar active={page} onNav={setPage}/>
+      <div className="main">
+        <TopBar {...titles[page]} regions={regions}/>
+        {page === 'feed'    && <KillFeed/>}
+        {page === 'builds'  && <BuildsPage/>}
+        {page === 'tier'    && <div style={{padding:'20px 24px', maxWidth:1280}}><TierList/></div>}
+        {page === 'matchup' && <div style={{padding:'20px 24px', maxWidth:1280}}><MatchupMatrix/></div>}
+        {page === 'player'  && <PlayerProfile/>}
+        {page === 'guild'   && (
+          <div style={{padding:'40px 24px', fontFamily:'var(--font-mono)', fontSize:12, color:'var(--color-text-tertiary)'}}>
+            No guild selected. Use the search bar to look up a guild.
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

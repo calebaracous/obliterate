@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css">
+<style>
+  body { padding: 0; }
+  .wrap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+  .tier {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-right: 1px solid rgba(0,0,0,0.4);
+  }
+  .tier:last-child { border-right: none; }
+  .letter {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+  .meta { font-family: var(--font-mono); font-size: 10px; opacity: 0.8; }
+</style></head>
+<body>
+<div class="wrap">
+  <div class="tier" style="background:#2a1e06"><div class="letter" style="color:#f0a020">S</div><div class="meta" style="color:#f0a020">tier-s · #f0a020</div></div>
+  <div class="tier" style="background:#1e2a06"><div class="letter" style="color:#90c040">A</div><div class="meta" style="color:#90c040">tier-a · #90c040</div></div>
+  <div class="tier" style="background:#062028"><div class="letter" style="color:#40a0c0">B</div><div class="meta" style="color:#40a0c0">tier-b · #40a0c0</div></div>
+  <div class="tier" style="background:#20201a"><div class="letter" style="color:#a0a090">C</div><div class="meta" style="color:#a0a090">tier-c · #a0a090</div></div>
+  <div class="tier" style="background:#201a1a"><div class="letter" style="color:#806060">D</div><div class="meta" style="color:#806060">tier-d · #806060</div></div>
+</div>
+</body></html>
