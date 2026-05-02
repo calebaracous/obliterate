@@ -149,6 +149,18 @@ NODE_ENV=
 
 ---
 
+## Deployment workflow
+
+**Single-branch, production-only.** There is no preview environment. All work happens directly on `main` — push to `main` and Vercel deploys to production automatically.
+
+- No feature branches, no PRs, no preview deployments.
+- `vercel.json` cron jobs run against the production deployment only.
+- Vercel is configured with `commandForIgnoringBuildStep: '[ "$VERCEL_ENV" != "production" ]'` — any non-production build (preview, etc.) is skipped at the Vercel level.
+- To deploy: `git push origin main`. That's it.
+- To check deployment status: `vercel ls` or visit https://vercel.com/calebaracous-projects/obliterate.
+
+---
+
 ## Getting started (local dev)
 
 ```bash
